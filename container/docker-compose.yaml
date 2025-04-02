@@ -1,0 +1,9 @@
+services:
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: nexus
+    restart: unless-stopped
+    ports:
+      - "5051:8081"
+    volumes:
+      - /home/boyfer/ws/nexus:/nexus-data
